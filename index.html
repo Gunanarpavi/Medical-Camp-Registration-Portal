@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Medical Camp Registration Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>Medical Camp Registration Portal</h2>
+        <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="camp.html">Camp Details</a></li>
+      <li><a href="register.html">Registration</a></li>
+      <li><a href="admin.html">Admin View</a></li>
+      <li><a href="gallery.html" >Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+     <section class="home-hero">
+  <div class="hero-content">
+    <p class="eyebrow">Free Healthcare Services</p>
+
+    <h1>Welcome to Medical Camp Registration Portal</h1>
+    <p>
+      Register for upcoming free medical camps and access health checkups near you.
+    </p>
+
+        <a href="register.html" class="primary-button">Register Now</a>
+        <a href="camp.html" class="secondary-button">View Camps</a>
+</div>
+    </section>
+<div class="chatbot">
+  <button class="chatbot-button" onclick="toggleChat()">AI Help</button>
+
+  <div class="chatbot-box" id="chatbotBox">
+    <div class="chatbot-header">
+      <h3>AI Assistant</h3>
+      <button onclick="toggleChat()">X</button>
+    </div>
+
+    <div class="chatbot-messages" id="chatMessages">
+      <p class="bot-message">Hello! I can help you with camp details, registration, contact, and admin view.</p>
+    </div>
+
+    <div class="chatbot-input">
+      <input type="text" id="userInput" placeholder="Ask something...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+  </div>
+  <script src="chatbot.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Camp Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <h2>Medical Camp Registration Portal</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="camp.html" class="active">Camp Details</a></li>
+      <li><a href="register.html">Registration</a></li>
+      <li><a href="admin.html">Admin View</a></li>
+      <li><a href="gallery.html" >Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="top-actions">
+  <a href="index.html" class="top-button">Home</a>
+</div>
+
+  <section class="content-section">
+    <div class="section-heading">
+      <p class="eyebrow">Camp Details</p>
+      <h1>Available Medical Camp Information</h1>
+      <p class="section-text">
+        Browse upcoming medical camps with their name, date, and location.
+      </p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>General Health Checkup Camp</h3>
+        <p><strong>Date:</strong> 15 June 2026</p>
+        <p><strong>Location:</strong> Community Health Center</p>
+        <a href="general-health.html" class="details-button">View Details</a>
+      </div>
+
+      <div class="info-card">
+        <h3>Eye and Dental Care Camp</h3>
+        <p><strong>Date:</strong> 22 June 2026</p>
+        <p><strong>Location:</strong> City Public School Hall</p>
+        <a href="eye-dental.html" class="details-button">View Details</a>
+      </div>
+
+      <div class="info-card">
+        <h3>Blood Donation Camp</h3>
+        <p><strong>Date:</strong> 30 June 2026</p>
+        <p><strong>Location:</strong> Town Hall</p>
+        <a href="blood-donation.html" class="details-button">View Details</a>
+      </div>
+
+      <div class="info-card">
+        <h3>Women Health Awareness Camp</h3>
+        <p><strong>Date:</strong> 6 July 2026</p>
+        <p><strong>Location:</strong> Primary Health Centre</p>
+        <a href="women-health.html" class="details-button">View Details</a>
+      </div>
+    </div>
+  </section>
+  <section class="content-section">
+  <div class="section-heading">
+    <p class="eyebrow">Upcoming Camps</p>
+    <h1>Upcoming Medical Camps</h1>
+    <p class="section-text">
+      Check the upcoming medical camps with scheduled date, time, and location.
+    </p>
+  </div>
+
+  <div class="upcoming-list">
+    <div class="upcoming-card">
+      <h3>Child Health Checkup Camp</h3>
+      <p><strong>Date:</strong> 12 July 2026</p>
+      <p><strong>Time:</strong> 10:00 AM to 1:00 PM</p>
+      <p><strong>Location:</strong> Government Primary School</p>
+    </div>
+
+    <div class="upcoming-card">
+      <h3>Diabetes Screening Camp</h3>
+      <p><strong>Date:</strong> 20 July 2026</p>
+      <p><strong>Time:</strong> 9:30 AM to 2:00 PM</p>
+      <p><strong>Location:</strong> Community Health Center</p>
+    </div>
+
+    <div class="upcoming-card">
+      <h3>Heart Health Awareness Camp</h3>
+      <p><strong>Date:</strong> 28 July 2026</p>
+      <p><strong>Time:</strong> 11:00 AM to 3:00 PM</p>
+      <p><strong>Location:</strong> City Public Hall</p>
+    </div>
+  </div>
+</section>
+
+  <div class="chatbot">
+  <button class="chatbot-button" onclick="toggleChat()">AI Help</button>
+
+  <div class="chatbot-box" id="chatbotBox">
+    <div class="chatbot-header">
+      <h3>AI Assistant</h3>
+      <button onclick="toggleChat()">X</button>
+    </div>
+
+    <div class="chatbot-messages" id="chatMessages">
+      <p class="bot-message">Hello! I can help you with camp details, registration, contact, and admin view.</p>
+    </div>
+
+    <div class="chatbot-input">
+      <input type="text" id="userInput" placeholder="Ask something...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+<script src="chatbot.js"></script>
+
+</body>
+</html>

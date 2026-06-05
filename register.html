@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <h2>Medical Camp Registration Portal</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="camp.html">Camp Details</a></li>
+      <li><a href="register.html" class="active">Registration</a></li>
+      <li><a href="admin.html">Admin View</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="register-page-bg">
+    <div class="top-actions">
+      <button onclick="history.back()" class="top-button">Back</button>
+      <a href="index.html" class="top-button">Home</a>
+    </div>
+  </div>
+
+  <section class="alternate-section">
+    <div class="section-heading">
+      <p class="eyebrow">Registration</p>
+      <h1>Register for a Camp</h1>
+    </div>
+
+    <form class="registration-form" onsubmit="saveRegistration(event)">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <label for="age">Age</label>
+      <input type="number" id="age" placeholder="Enter your age" required>
+
+      <label for="contact">Contact Number</label>
+      <input type="tel" id="contact" placeholder="Enter your contact number" required>
+
+      <label for="camp">Select Camp</label>
+      <select id="camp" required>
+        <option value="">Choose a camp</option>
+        <option>General Health Checkup Camp</option>
+        <option>Eye and Dental Care Camp</option>
+        <option>Blood Donation Camp</option>
+        <option>Women Health Awareness Camp</option>
+      </select>
+
+      <button type="submit" class="secondary-button">Submit Registration</button>
+    </form>
+
+    <p id="success-message" class="success-message">
+      Registration saved successfully!
+    </p>
+
+    <div id="saved-data"></div>
+  </section>
+
+  <script>
+    function saveRegistration(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const age = document.getElementById("age").value;
+      const contact = document.getElementById("contact").value;
+      const camp = document.getElementById("camp").value;
+
+      const participant = {
+        name: name,
+        age: age,
+        contact: contact,
+        camp: camp
+      };
+
+      let registrations = JSON.parse(localStorage.getItem("registrations")) || [];
+      registrations.push(participant);
+
+      localStorage.setItem("registrations", JSON.stringify(registrations));
+
+      document.getElementById("success-message").style.display = "block";
+      event.target.reset();
+    }
+  </script>
+
+  <div class="chatbot">
+    <button class="chatbot-button" onclick="toggleChat()">AI Help</button>
+
+    <div class="chatbot-box" id="chatbotBox">
+      <div class="chatbot-header">
+        <h3>AI Assistant</h3>
+        <button onclick="toggleChat()">X</button>
+      </div>
+
+      <div class="chatbot-messages" id="chatMessages">
+        <p class="bot-message">Hello! I can help you with camp details, registration, contact, and admin view.</p>
+      </div>
+
+      <div class="chatbot-input">
+        <input type="text" id="userInput" placeholder="Ask something...">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="chatbot.js"></script>
+
+</body>
+</html>
