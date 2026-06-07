@@ -1,55 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Medical Camp Registration Portal</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Medical Camp Registration Portal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <h2>Medical Camp Registration Portal</h2>
-        <ul>
+  <nav>
+    <h2>Medical Camp Registration Portal</h2>
+    <ul>
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="camp.html">Camp Details</a></li>
       <li><a href="register.html">Registration</a></li>
       <li><a href="admin.html">Admin View</a></li>
-      <li><a href="gallery.html" >Gallery</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-     <section class="home-hero">
-  <div class="hero-content">
-    <p class="eyebrow">Free Healthcare Services</p>
+    </ul>
+  </nav>
 
-    <h1>Welcome to Medical Camp Registration Portal</h1>
+  <section class="home-hero">
+    <div class="hero-content">
+      <p class="eyebrow">Free Healthcare Services</p>
+      <h1>Welcome to Medical Camp Registration Portal</h1>
+      <p>
+        Register for upcoming free medical camps and access health checkups near you.
+      </p>
+
+      <a href="register.html" class="primary-button">Register Now</a>
+      <a href="#home-camps" class="secondary-button">View Camps</a>
+    </div>
+  </section>
+
+<section class="about-home-section" id="home-about">
+  <div class="about-home-content">
+    <p class="about-eyebrow">About</p>
+    <h1>About Medical Camp Registration Portal</h1>
     <p>
-      Register for upcoming free medical camps and access health checkups near you.
+      The Medical Camp Registration Portal is designed to help people easily find
+      free medical camp services, view camp schedules, register for suitable camps,
+      and contact organizers. This portal supports community healthcare outreach by
+      providing camp details, registration support, gallery information, location maps,
+      and an AI help assistant in one simple website.
     </p>
+  </div>
+</section>
 
-        <a href="register.html" class="primary-button">Register Now</a>
-        <a href="camp.html" class="secondary-button">View Camps</a>
-</div>
-    </section>
-<div class="chatbot">
-  <button class="chatbot-button" onclick="toggleChat()">AI Help</button>
-
-  <div class="chatbot-box" id="chatbotBox">
-    <div class="chatbot-header">
-      <h3>AI Assistant</h3>
-      <button onclick="toggleChat()">X</button>
+  <section class="content-section" id="home-camps">
+    <div class="section-heading">
+      <p class="eyebrow">Camp Details</p>
+      <h1>Available Medical Camps</h1>
     </div>
 
-    <div class="chatbot-messages" id="chatMessages">
-      <p class="bot-message">Hello! I can help you with camp details, registration, contact, and admin view.</p>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>General Health Checkup Camp</h3>
+        <p><strong>Date:</strong> 15 June 2026</p>
+        <p><strong>Location:</strong> Community Health Center</p>
+        <a href="general-health.html" class="details-button">View Details</a>
+      </div>
+
+      <div class="info-card">
+        <h3>Eye and Dental Care Camp</h3>
+        <p><strong>Date:</strong> 22 June 2026</p>
+        <p><strong>Location:</strong> City Public School Hall</p>
+        <a href="eye-dental.html" class="details-button">View Details</a>
+      </div>
+
+      <div class="info-card">
+        <h3>Blood Donation Camp</h3>
+        <p><strong>Date:</strong> 30 June 2026</p>
+        <p><strong>Location:</strong> Town Hall</p>
+        <a href="blood-donation.html" class="details-button">View Details</a>
+      </div>
+
+      <div class="info-card">
+        <h3>Women Health Awareness Camp</h3>
+        <p><strong>Date:</strong> 6 July 2026</p>
+        <p><strong>Location:</strong> Primary Health Centre</p>
+        <a href="women-health.html" class="details-button">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="section-heading">
+      <p class="eyebrow">Upcoming Camps</p>
+      <h1>Upcoming Medical Camps</h1>
     </div>
 
-    <div class="chatbot-input">
-      <input type="text" id="userInput" placeholder="Ask something...">
-      <button onclick="sendMessage()">Send</button>
+    <div class="upcoming-list">
+      <div class="upcoming-card">
+        <h3>Child Health Checkup Camp</h3>
+        <p><strong>Date:</strong> 12 July 2026</p>
+        <p><strong>Time:</strong> 10:00 AM to 1:00 PM</p>
+        <p><strong>Location:</strong> Government Primary School</p>
+      </div>
+
+      <div class="upcoming-card">
+        <h3>Diabetes Screening Camp</h3>
+        <p><strong>Date:</strong> 20 July 2026</p>
+        <p><strong>Time:</strong> 9:30 AM to 2:00 PM</p>
+        <p><strong>Location:</strong> Community Health Center</p>
+      </div>
+
+      <div class="upcoming-card">
+        <h3>Heart Health Awareness Camp</h3>
+        <p><strong>Date:</strong> 28 July 2026</p>
+        <p><strong>Time:</strong> 11:00 AM to 3:00 PM</p>
+        <p><strong>Location:</strong> City Public Hall</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alternate-section">
+    <div class="section-heading">
+      <p class="eyebrow">Registration</p>
+      <h1>Register for a Camp</h1>
+      <p class="section-text">
+        Fill out the registration form with your basic details and selected camp.
+        Your registration will be saved and shown in the Admin View.
+      </p>
+    </div>
+
+    <a href="register.html" class="secondary-button">Go to Registration</a>
+  </section>
+
+  <section class="content-section">
+    <div class="section-heading">
+      <p class="eyebrow">Gallery</p>
+      <h1>Successful Medical Camp Photos</h1>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="images/camp1.jpg" alt="Successful medical camp">
+        <p>Successful medical camp activity</p>
+      </div>
+
+      <div class="gallery-card">
+        <img src="images/general-health.jpg" alt="General health checkup camp">
+        <p>General health checkup session</p>
+      </div>
+
+      <div class="gallery-card">
+        <img src="images/women-health.jpg" alt="Women health awareness camp">
+        <p>Women health awareness session</p>
+      </div>
+    </div>
+
+    <br>
+    <a href="gallery.html" class="primary-button">View Full Gallery</a>
+  </section>
+
+  <section class="contact-home-section">
+  <div class="contact-home-content">
+    <p class="contact-eyebrow">Contact</p>
+    <h1>Contact Organizers</h1>
+
+    <div class="contact-home-box">
+      <p><strong>Email:</strong> medicalcamp@gmail.com</p>
+      <p><strong>Phone:</strong> +91 98765 43210, +91 91234 56789</p>
+      <p><strong>Landline:</strong> 044-2345 6789, 044-2456 7890</p>
+      <p><strong>Location:</strong> Tamil Nadu, India</p>
+    </div>
+
+    <a href="contact.html" class="contact-home-button">Contact Page</a>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2026 Medical Camp Registration Portal. All rights reserved.</p>
+  </footer>
+
+  <div class="chatbot">
+    <button class="chatbot-button" onclick="toggleChat()">AI Help</button>
+
+    <div class="chatbot-box" id="chatbotBox">
+      <div class="chatbot-header">
+        <h3>AI Assistant</h3>
+        <button onclick="toggleChat()">X</button>
+      </div>
+
+      <div class="chatbot-messages" id="chatMessages">
+        <p class="bot-message">Hello! I can help you with camp details, registration, contact, and admin view.</p>
+      </div>
+
+      <div class="chatbot-input">
+        <input type="text" id="userInput" placeholder="Ask something...">
+        <button onclick="sendMessage()">Send</button>
+      </div>
     </div>
   </div>
-  </div>
+
   <script src="chatbot.js"></script>
+
 </body>
 </html>
-
